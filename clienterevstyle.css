@@ -122,3 +122,81 @@ nav a {
 .brand-card a:hover {
   color: #f37c1f;
 }
+
+/* Estilos do botão hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #111;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-menu ul li {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-menu a {
+    display: block;
+    width: 100%;
+  }
+
+  .top-bar {
+    flex-wrap: wrap;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-card img {
+    margin-top: 0;
+  }
+}
+

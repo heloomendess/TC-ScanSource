@@ -5,42 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Termos e Condições</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="ScanSource Inc Simbolo Only.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/ScanSource Inc Simbolo Only.png" type="image/x-icon">
 </head>
 <body>
   <header class="top-bar">
-    <div class="logo">
-      <img src="ScanSource Inc.png" alt="ScanSource Logo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="cliente.html">Cliente</a></li>
-        <li><a href="revenda.html">Revenda</a></li>
-        <li><a target="_blank" href="https://scansource.com.br/wp-content/uploads/2023/04/TC-Cloud.pdf">ScanSource</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="logo">
+    <img src="assets/ScanSource Inc.png" alt="ScanSource Logo" />
+  </div>
+  
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+  
+  <nav id="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="cliente.html">Cliente</a></li>
+      <li><a href="revenda.html">Revenda</a></li>
+      <li><a target="_blank" href="https://scansource.com.br/wp-content/uploads/2023/04/TC-Cloud.pdf">ScanSource</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main class="container">
     <h1 class="main-title">Termos e Condições</h1>
 
     <section class="card-section">
       <div class="card">
-        <img src="cliente.png" alt="Cliente" class="card-icon">
+        <img src="assets/cliente.png" alt="Cliente" class="card-icon">
         <a href="cliente.html" class="card-button"> <strong>Cliente</strong></a>
       </div>
 
       <div class="card">
-        <img src="revenda.png" alt="Revenda" class="card-icon">
+        <img src="assets/revenda.png" alt="Revenda" class="card-icon">
         <a href="revenda.html" class="card-button"> <strong>Revenda</strong></a>
       </div>
 
       <div class="card">
-        <img src="ScanSource Inc Simbolo Only 1.png" alt="ScanSource" class="card-icon">
+        <img src="assets/ScanSource Inc Simbolo Only 1.png" alt="ScanSource" class="card-icon">
         <a target="_blank" href="https://scansource.com.br/wp-content/uploads/2023/04/TC-Cloud.pdf" class="card-button"><strong>ScanSource</strong></a>
       </div>
     </section>
   </main>
 </body>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+</script>
+
 </html>
